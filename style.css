@@ -1,0 +1,740 @@
+@font-face {
+    font-family: 'Bricolage Grotesque'; 
+    src: url(Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden; 
+    width: 100%;
+}
+
+body {
+    background-color: #FCFDF9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    max-width: 100vw
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    position: relative;
+    padding-left: 25px;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f621";
+    color: #FD4C52; 
+}
+
+nav ul, nav li, aside ul, aside li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li::before, aside li::before {
+    content: none;
+}
+
+header {
+    background-color: #2B32DB;
+    width: 100%; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    flex-shrink: 0; 
+    padding: 20px 80px;
+}
+
+header img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    margin-right: 30px;
+    transition: 0.5s;
+}
+
+header img:hover {
+    border-radius: 60% 40% 30% 70% / 50% 40% 50% 60%;
+    transition: 0.5s;
+}
+
+header .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+header .title:hover {
+    transform: scale(1.02);
+    transition: 0.5s;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 2.5em;
+    color: #FCFDF9;
+    margin: 0; 
+    transition: 0.5s;
+}
+
+header h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.2em;
+    color: #FCFDF9;
+    margin: 0; 
+}
+
+nav {
+    background-color: #FD4C52;
+    width: 100%; 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px 20px 20px 20px;
+}
+
+nav h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.3em;
+    color: #FCFDF9;
+    margin-bottom: 15px; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    font-size: 0.95em;
+    background-color: #F4F859;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #2B32DB;
+    border: 2px solid #2B32DB;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+section {
+    background-color: #FCFDF9;
+    width: 100%; 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px 40px 10px 40px;
+    flex: 1;
+}
+
+section h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.8em;
+    color: #2B32DB;
+}
+
+section h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.4em;
+    color: #2B32DB;
+}
+
+section li {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 8px;
+    color: #333333;
+}
+
+section table { 
+    border-collapse: collapse;
+}
+
+section #biodata .card-table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    position: relative;
+    z-index: 1;
+}
+
+section #biodata .card-table:hover {
+    transform: scale(1.4);
+    transition: 0.5s;
+    z-index: 2;
+}
+
+section #biodata .card-title {
+    background-color: #FD4C52;
+    text-align: center;
+    padding: 10px 0px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.2em;
+    color: #FCFDF9;
+}
+
+section #biodata .card-content {
+    background-color: #F4F859;
+}
+
+section #biodata .card-content img {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    border: 2px solid #2B32DB;
+    border-radius: 50%;
+    margin: 15px 20px 15px 15px;
+    vertical-align: top;
+}
+
+section #biodata .card-content .biodata-table th {
+    text-align: left;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 0.8em;
+    color: #2B32DB;
+}
+
+section #biodata .card-content .biodata-table td {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1em;
+    color: #333333;
+    vertical-align: top;
+    padding: 0px 15px 10px 0px;
+}
+
+section #biodata .contact-info td {
+    padding-right: 20px;
+}
+
+section #biodata .contact-info i {
+    margin: 10px 20px;
+    color: #FD4C52;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+section #biodata .contact-info a {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+}
+
+section #biodata .contact-info a:hover {
+    text-decoration: underline;
+    color: #2B32DB;
+}
+
+section #pendidikan li, #pengalaman li {
+    margin: 20px 0px;
+}
+
+section #pendidikan p, #pengalaman p {
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+section #pengalaman img {
+    width: 300px;
+    height: auto;
+    margin: 0px 30px;
+    border-radius: 10px;
+    border: 2px solid #2B32DB;
+}
+
+aside {
+    background-color: #F4F859;
+    width: 100%; 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0px 30px 20px 30px;
+    flex: 1;
+}
+
+aside h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.3em;
+    margin-bottom: 15px; 
+    color: #2B32DB;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: rows;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+aside a {
+    font-size: 0.95em;
+    background-color: #FCFDF9;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #2B32DB;
+    border: 2px solid #2B32DB;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+aside a:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+footer {
+    background-color: #2B32DB;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    flex-shrink: 0;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .contacts h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1.3em;
+    color: #FCFDF9;
+    margin: 0;
+}
+
+footer .social-media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 7px 0 0 0;
+    justify-content: center;
+}
+
+footer .social-media i {
+    font-size: 1.6em;
+    color: #FCFDF9;
+    transition: 0.5s;
+}
+
+footer .social-media i:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+footer .copyright {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #FCFDF9;
+    margin: 20px 0 0 0;
+}
+
+footer .website-slogan .website {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    color: #FCFDF9;
+    text-align: right;
+}
+
+footer .website-slogan .slogan {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #FCFDF9;
+}
+
+section > div {
+    display: none; 
+}
+
+section > div:first-child {
+    display: block;
+}
+
+section > div.active {
+    display: block; 
+}
+
+/* Mobile Phone View */
+@media only screen and (max-width: 480px) {
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    
+    .nav-section {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px 20px;
+    }
+
+    header img {
+        margin: 0 0 10px 0;
+    }
+
+    header .title {
+        font-size: smaller;
+    }
+    
+    nav {
+        flex-shrink: 0;
+    }
+    
+    aside {
+        flex-shrink: 1;
+    }
+
+    section #biodata table {
+        transform: none; 
+        transform-origin: center top;
+        margin: 15px auto;
+        width: 100%; 
+        max-width: 350px;
+    }
+
+    section #biodata table .card-title {
+        font-size: 1em; 
+        padding: 8px 0px;
+    }
+
+    section #biodata table .card-content img {
+        width: 80px; 
+        height: 112px; 
+        margin: 12px 15px 12px 12px; 
+    }
+
+    section table .card-content .biodata-table {
+        width: 100%; 
+    }
+
+    section #biodata table .card-content .biodata-table th {
+        font-size: 0.7em; 
+        padding: 2px 8px 2px 0;
+        line-height: 1.1;
+    }
+
+    section #biodata table .card-content .biodata-table td {
+        font-size: 0.85em;
+        padding: 2px 8px 6px 0px; 
+        line-height: 1.2; 
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 15px 20px;
+        text-align: center;
+        gap: 8px; 
+    }
+
+    footer .contacts {
+        margin: 0; 
+    }
+
+    footer .contacts h1 {
+        font-size: 1em;
+        margin: 0 0 8px 0; 
+    }
+
+    footer .social-media {
+        justify-content: center;
+        margin: 0; 
+        gap: 12px; 
+    }
+
+    footer .social-media i {
+        font-size: 1.3em;
+    }
+
+    footer .copyright {
+        font-size: 0.8em;
+        margin: 0; 
+        text-align: center;
+        line-height: 1.2; 
+    }
+
+    footer .website-slogan {
+        text-align: center;
+        margin: 0; 
+    }
+
+    footer .website-slogan .website {
+        font-size: 1.4em;
+        text-align: center;
+        margin: 0; 
+        line-height: 1.1; 
+    }
+
+    footer .website-slogan .slogan {
+        font-size: 0.8em;
+        margin: 0; 
+        line-height: 1.1; 
+    }
+}
+
+/* Portrait Tablet View */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    
+    .nav-section {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    
+    nav {
+        width: 100%; 
+        flex-shrink: 0;
+        padding-bottom: 20px;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start; 
+        list-style: none;
+        margin: 0;
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 0.8em;
+    }
+    
+    section {
+        width: 100%; 
+        flex: 1;
+    }
+
+    section table {
+        transform: scale(1);
+        transform-origin: center top;
+        margin: 20px auto;
+    }
+    
+    aside {
+        width: 100%; 
+        flex-shrink: 0;
+    }
+
+    aside ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        justify-content: flex-start; 
+        list-style: none;
+        margin: 0;
+        padding: 0; 
+        gap: 10px; 
+    }
+
+    aside a {
+        padding: 8px 12px;
+        font-size: 0.8em;
+    }
+
+    section #biodata table {
+        transform: scale(1);
+        transform-origin: center top;
+        margin: 20px auto;
+    }
+
+    footer {
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: flex-start; 
+        padding: 20px 30px;
+        gap: 20px;
+    }
+
+    footer .contacts h1 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    footer .social-media {
+        justify-content: flex-start; 
+        margin: 0;
+    }
+
+    footer .social-media i {
+        font-size: 1.2em;
+    }
+
+    footer .copyright {
+        font-size: 0.9em;
+        margin: 0; 
+        text-align: left; 
+    }
+
+    footer .website-slogan {
+        text-align: right;
+    }
+
+    footer .website-slogan .website {
+        font-size: 1.6em;
+        text-align: right;
+    }
+
+    footer .website-slogan .slogan {
+        font-size: 0.9em;
+        text-align: right;
+    }
+}
+
+/* Landscape Tablet View */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    
+    .nav-section {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        min-height: 55vh;
+        max-height: 55vh;
+    }
+    
+    nav {
+        width: 30%;
+        flex-shrink: 1;
+    }
+    
+    section {
+        width: 70%;
+        flex: 1;
+        overflow-y: auto;
+    }
+    
+    aside {
+        width: 100%;
+        flex-shrink: 1;
+        overflow-y: auto;
+    }
+
+    section #biodata table {
+        transform: scale(1); 
+        transform-origin: center top;
+        margin: 20px auto;
+    }
+
+    footer .contacts h1 {
+        font-size: 1.1em; 
+    }
+
+    footer .social-media i {
+        font-size: 1.4em; 
+    }
+
+    footer .copyright {
+        font-size: 0.9em; 
+    }
+
+    footer .website-slogan .website {
+        font-size: 1.7em; 
+    }
+
+    footer .website-slogan .slogan {
+        font-size: 0.9em; 
+    }
+}
+
+/* Desktop View */
+@media only screen and (min-width: 1025px) {
+    .main-content {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        min-height: 0;
+    }
+    
+    .nav-section {
+        display: flex;
+        flex-direction: row;
+        width: 75%; 
+        flex-shrink: 0;
+        min-height: 0; 
+    }
+    
+    nav {
+        width: 25%; 
+        flex-shrink: 0;
+        overflow-y: auto;
+    }
+    
+    section {
+        width: 50%; 
+        flex-shrink: 0;
+        overflow-y: auto; 
+    }
+    
+    aside {
+        width: 25%;
+        flex-shrink: 0;
+        overflow-y: auto; 
+    }
+
+    section table {
+        transform: scale(1); 
+        transform-origin: center top;
+        margin: 20px auto;
+    }
+}
