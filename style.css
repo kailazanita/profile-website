@@ -74,6 +74,7 @@ header img {
 header img:hover {
     border-radius: 60% 40% 30% 70% / 50% 40% 50% 60%;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 header .title {
@@ -86,6 +87,7 @@ header .title {
 header .title:hover {
     transform: scale(1.02);
     transition: 0.5s;
+    cursor: pointer;
 }
 
 header a {
@@ -104,7 +106,7 @@ header h2 {
     font-family: 'Bricolage Grotesque', sans-serif;
     font-size: 1.2em;
     color: #FCFDF9;
-    margin: 0; 
+    margin: 0;
 }
 
 nav {
@@ -148,6 +150,7 @@ nav a {
 nav a:hover {
     transform: scale(1.1);
     transition: 0.5s;
+    cursor: pointer;
 }
 
 section {
@@ -259,6 +262,7 @@ section #biodata .contact-info a {
 section #biodata .contact-info a:hover {
     text-decoration: underline;
     color: #2B32DB;
+    cursor: pointer;
 }
 
 section #pendidikan li, #pengalaman li {
@@ -321,6 +325,7 @@ aside a {
 aside a:hover {
     transform: scale(1.1);
     transition: 0.5s;
+    cursor: pointer;
 }
 
 footer {
@@ -359,6 +364,7 @@ footer .social-media i {
 footer .social-media i:hover {
     transform: scale(1.2);
     transition: 0.5s;
+    cursor: pointer;
 }
 
 footer .copyright {
