@@ -265,28 +265,85 @@ section #biodata .contact-info a:hover {
     cursor: pointer;
 }
 
-section #pendidikan li, #pengalaman li {
+section #pendidikan li,
+section #pengalaman li {
     margin: 20px 0px;
 }
 
-section #pendidikan p, #pengalaman p {
+section #pendidikan p, 
+section #pengalaman p, 
+section #portfolio p {
     margin-left: 10px;
     font-size: 0.9em;
 }
 
-section #pengalaman .pengalaman-galeri {
+section #pengalaman .pengalaman-galeri, 
+section #portofolio .portofolio-galeri {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 10px;
+    gap: 20px;
 }
 
 section #pengalaman img {
     width: 250px;
     height: 170px;
     object-fit: cover;
-    margin: 0px 0px 0px 30px;
     border-radius: 10px;
     border: 2px solid #2B32DB;
+    margin-left: 10px;
+    transition: 0.5s;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+section #pengalaman img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 2;
+}
+
+section #portfolio img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #2B32DB;
+    margin: 0px 0px 10px 10px;
+    transition: 0.5s;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+section #portfolio img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 2;
+}
+
+section #portofolio img {
+    width: 250px;
+    height: auto; 
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #2B32DB;
+    margin: 0px 0px 10px 10px;
+    transition: 0.5s;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+section #portofolio img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 2;
 }
 
 section #keahlian .keahlian-galeri {
@@ -295,26 +352,9 @@ section #keahlian .keahlian-galeri {
 }
 
 section #keahlian img {
-    width: 80px;
+    width: 60px;
     height: auto;
-    margin: 80px 0px 0px 50px;
-}
-
-section #keahlian #icon-1 {
-    animation: float 3s ease-in-out infinite;
-}
-
-section #keahlian #icon-2 {
-    animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
+    margin: 40px 0px 20px 20px;
 }
 
 aside {
@@ -509,6 +549,18 @@ section > div.active {
         line-height: 1.2; 
     }
 
+    section #pengalaman .pengalaman-galeri, 
+    section #portofolio .portofolio-galeri {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    section #pengalaman img,
+    section #portofolio img {
+        width: 100%;
+        max-width: 280px;
+    }
+
     footer {
         flex-direction: column;
         padding: 15px 20px;
@@ -632,6 +684,19 @@ section > div.active {
         transform: scale(1);
         transform-origin: center top;
         margin: 20px auto;
+    }
+
+    section #pengalaman .pengalaman-galeri,
+    section #portofolio .portofolio-galeri {
+        gap: 10px;
+    }
+    
+    section #pengalaman img,
+    section #portofolio img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        aspect-ratio: 250/170;
     }
 
     footer {
